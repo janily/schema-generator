@@ -3,6 +3,7 @@ import { useStore } from '../hooks';
 import RenderChildren from './RenderChildren';
 import RenderField from './RenderField';
 import Wrapper from './Wrapper';
+import './Wrapper.css';
 
 const FR = ({ id = '#', preview = false }) => {
   const { flatten, frProps = {} } = useStore();
@@ -16,7 +17,7 @@ const FR = ({ id = '#', preview = false }) => {
   const isComplex = isObj || isList;
   const width = schema['ui:width'];
   let containerClass = `fr-field w-100 ${isComplex ? 'fr-field-complex' : ''}`;
-  let labelClass = 'fr-label mb2';
+  let labelClass = 'mb2';
   let contentClass = 'fr-content';
 
   let columnStyle = {};
@@ -67,10 +68,10 @@ const FR = ({ id = '#', preview = false }) => {
   const isCheckBox =
     schema.type === 'boolean' && schema['ui:widget'] !== 'switch';
   if (displayType === 'row' && !isComplex && !isCheckBox) {
-    containerClass += ' flex items-center';
-    labelClass += ' flex-shrink-0 fr-label-row';
+    containerClass += 'tea-form__item';
+    labelClass += ' tea-form__label';
     labelClass = labelClass.replace('mb2', 'mb0');
-    contentClass += ' flex-grow-1 relative';
+    contentClass += ' tea-form__controls tea-form__controls--text';
   }
 
   // 横排的checkbox

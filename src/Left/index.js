@@ -18,7 +18,7 @@ const Left = props => {
           }
           return (
             <div key={idx}>
-              <p className="f6 b">{item.title}</p>
+              <p className="f6 b g-title">{item.title}</p>
               <ul className="pl0">
                 {Array.isArray(item.widgets) ? (
                   item.widgets.map((widget, idx) => {

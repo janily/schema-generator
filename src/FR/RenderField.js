@@ -39,7 +39,7 @@ const RenderField = ({
     ? Number(effectiveLabelWidth)
     : isCssLength(effectiveLabelWidth)
     ? effectiveLabelWidth
-    : 110; // 默认是 110px 的长度
+    : ''; // 默认是 110px 的长度
 
   let labelStyle = { width: _labelWidth };
   if (widgetName === 'checkbox') {

@@ -11,3 +11,27 @@
 .dnd-container > .field-wrapper > .fr-field {
   margin: 0;
 }
+.tea-form__item {
+  display: table-row;
+}
+.tea-form__label {
+  vertical-align: baseline;
+  color: rgba(0, 0, 0, 0.4);
+  padding-right: 20px;
+  /* padding-top: 6px; */
+  padding-bottom: 6px;
+  width: 1px;
+}
+
+.tea-form__controls {
+  color: #000;
+  word-wrap: break-word;
+  word-break: break-word;
+  padding-right: 24px;
+  width: 100%;
+}
+
+.tea-form__label,.tea-form__controls  {
+  display: table-cell;
+  vertical-align: top;
+}
